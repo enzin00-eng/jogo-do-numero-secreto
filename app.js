@@ -16,7 +16,7 @@ function exibirTextoNaTela(tag, texto) {
     
     function exibirMensagemInicial() {
         exibirTextoNaTela('h1', 'Jogo do número secreto');
-        exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+        exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
     }
     
     exibirMensagemInicial();
@@ -42,13 +42,13 @@ function exibirTextoNaTela(tag, texto) {
     }
     
     function gerarNumeroAleatorio() {
-        if (listaDeNumerosSorteados.length === 10) {
+        if (listaDeNumerosSorteados.length === 100) {
             listaDeNumerosSorteados = []; // Reinicia a lista quando todos os números já foram sorteados
         }
         
         let numeroEscolhido;
         do {
-            numeroEscolhido = parseInt(Math.random() * 10 + 1);
+            numeroEscolhido = parseInt(Math.random() * 100 + 1);
         } while (listaDeNumerosSorteados.includes(numeroEscolhido));
     
         listaDeNumerosSorteados.push(numeroEscolhido);
@@ -72,7 +72,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'Jogo do número secreto');
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
+    exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
 }
 
 exibirMensagemInicial();
@@ -98,13 +98,13 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    if (listaDeNumerosSorteados.length === 10) {
+    if (listaDeNumerosSorteados.length === 100) {
         listaDeNumerosSorteados = []; // Reinicia a lista quando todos os números já foram sorteados
     }
     
     let numeroEscolhido;
     do {
-        numeroEscolhido = parseInt(Math.random() * 10 + 1);
+        numeroEscolhido = parseInt(Math.random() * 100 + 1);
     } while (listaDeNumerosSorteados.includes(numeroEscolhido));
 
     listaDeNumerosSorteados.push(numeroEscolhido);
